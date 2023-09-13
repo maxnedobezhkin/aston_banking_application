@@ -6,9 +6,11 @@
 	<packaging>pom</packaging>
 	<name>app</name>
 	<modules>
+		<module>configure</module>
 		<module>controller</module>
 		<module>service</module>
 		<module>repository</module>
+		<module>domain</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
