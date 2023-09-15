@@ -16,8 +16,8 @@ public class UserServiceImp implements UserService {
 	private final UserRepository userRepository;
 
 	@Override
-	public Optional<User> findUserById() {
-		return null;
+	public Optional<User> findUserByLogin(String login) {
+		return userRepository.findByLogin(login);
 	}
 
 

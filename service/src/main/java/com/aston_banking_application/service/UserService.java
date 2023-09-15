@@ -6,6 +6,6 @@ import com.aston_banking_application.User;
 
 public interface UserService {
 	
-	public Optional<User> findUserById();
+	public Optional<User> findUserByLogin(String login);
 
 }
