@@ -3,6 +3,8 @@ package com.aston_banking_application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.aston_banking_application.bpp.BppMessage;
+
 @SpringBootApplication
 public class Application {
 

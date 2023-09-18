@@ -5,12 +5,15 @@ import org.springframework.stereotype.Service;
 
 import com.aston_banking_application.User;
 import com.aston_banking_application.UserRepository;
+import com.aston_banking_application.bpp.BppMessage;
 import com.aston_banking_application.service.UserService;
 
+import jakarta.annotation.PostConstruct;
 import lombok.Data;
 
 @Service
 @Data
+@BppMessage
 public class UserServiceImp implements UserService {
 	
 	private final UserRepository userRepository;
@@ -18,6 +21,16 @@ public class UserServiceImp implements UserService {
 	@Override
 	public Optional<User> findUserByLogin(String login) {
 		return userRepository.findByLogin(login);
+	}
+
+	@Override
+	public void saveUser(User user) {
+		userRepository.save(user);
+	}
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("Post construct method in service imp");
 	}
 
 

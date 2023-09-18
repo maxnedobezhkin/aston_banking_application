@@ -21,6 +21,7 @@ public class User {
 	private int id;
 	private String login;
 	private String password;
+	
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
 	private UserInfo userInfo;
 

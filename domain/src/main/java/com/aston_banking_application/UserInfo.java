@@ -26,10 +26,12 @@ public class UserInfo {
 	private String firstname;
 	private String lastname;
 	private String address;
+	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "userInfo")
 	private List<Account> account;
+	
 	@OneToOne
-	@JoinColumn(name = "user_id")
+//	@JoinColumn(name = "user_id")
 	private User user;
 
 }
