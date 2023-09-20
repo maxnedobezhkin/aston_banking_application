@@ -1,7 +1,9 @@
 package com.aston_banking_application.serviceimpl;
 import java.util.Optional;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.aston_banking_application.User;
 import com.aston_banking_application.UserRepository;
@@ -14,6 +16,7 @@ import lombok.Data;
 @Service
 @Data
 @BppMessage
+@Transactional
 public class UserServiceImp implements UserService {
 	
 	private final UserRepository userRepository;
